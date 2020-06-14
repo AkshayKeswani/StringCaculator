@@ -20,4 +20,10 @@ public class CalculatorTest {
 	assertEquals(Integer.parseInt(s1),cal.StringCalculator(s1));
 	}
 	
+	@Test
+	public void twoNumbers() {
+	String s1="1,2";
+	assertEquals(3,cal.StringCalculator(s1));
+	}
+	
 }
