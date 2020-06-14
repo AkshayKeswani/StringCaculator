@@ -32,4 +32,10 @@ public class CalculatorTest {
 	assertEquals(21,cal.StringCalculator(s1));
 	}
 	
+	@Test
+	public void newLineNumber() {
+	String s1="1\n2,3";
+	assertEquals(6,cal.StringCalculator(s1));
+	}
+	
 }

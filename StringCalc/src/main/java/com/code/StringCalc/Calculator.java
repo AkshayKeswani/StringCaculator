@@ -4,7 +4,7 @@ public class Calculator {
 
 	public int StringCalculator(String inputOne) {
 		
-		String[] element=inputOne.split(",");
+		String[] element=inputOne.split("\\n|,");
 		if(inputOne=="") {
 			return 0;
 		}
@@ -23,5 +23,10 @@ public class Calculator {
 			
 		}
 		
+	}
+	
+	public static void main(String args[]) {
+		Calculator c2=new Calculator();
+		System.out.println(c2.StringCalculator("1\n2,3"));
 	}
 }
