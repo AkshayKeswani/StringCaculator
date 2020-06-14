@@ -38,4 +38,12 @@ public class CalculatorTest {
 	assertEquals(6,cal.StringCalculator(s1));
 	}
 	
+
+	@Test 
+	public void otherDelimiters(){ 
+	String s1="//;\n1;2";
+	assertEquals(3,cal.StringCalculator(s1));
+	}
+	 
+	
 }

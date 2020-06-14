@@ -4,12 +4,21 @@ public class Calculator {
 
 	public int StringCalculator(String inputOne) {
 		
-		String[] element=inputOne.split("\\n|,");
+		String[] element;
 		if(inputOne=="") {
 			return 0;
 		}
 		
-		else if(element.length==1) {
+		if(inputOne.startsWith("//")) {
+			String s5=Character.toString(inputOne.charAt(2));
+			element=inputOne.substring(4).split(s5);
+		}
+		
+		else {
+			element=inputOne.split("\\n|,");
+		}
+		
+		if(element.length==1) {
 			String s2=element[0];
 			return Integer.parseInt(s2);
 		}
@@ -17,16 +26,12 @@ public class Calculator {
 		else {
 			int sum1=0;
 			for(int i=0;i<element.length;i++) {
-				sum1+=Integer.parseInt(element[i]);
+					if("".equals(element[i])) { 
+					  continue; 
+					  }
+				 sum1+=Integer.parseInt(element[i]);
 			}
 			return sum1;
-			
 		}
-		
-	}
-	
-	public static void main(String args[]) {
-		Calculator c2=new Calculator();
-		System.out.println(c2.StringCalculator("1\n2,3"));
 	}
 }
