@@ -26,4 +26,10 @@ public class CalculatorTest {
 	assertEquals(3,cal.StringCalculator(s1));
 	}
 	
+	@Test
+	public void multipleNumbers() {
+	String s1="1,2,3,4,5,6";
+	assertEquals(21,cal.StringCalculator(s1));
+	}
+	
 }

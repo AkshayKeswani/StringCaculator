@@ -15,9 +15,12 @@ public class Calculator {
 		}
 		
 		else {
-			Integer i1=Integer.parseInt(element[0]);
-			Integer i2=Integer.parseInt(element[1]);
-			return i1+i2;
+			int sum1=0;
+			for(int i=0;i<element.length;i++) {
+				sum1+=Integer.parseInt(element[i]);
+			}
+			return sum1;
+			
 		}
 		
 	}
