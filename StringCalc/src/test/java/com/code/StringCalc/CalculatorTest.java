@@ -10,39 +10,81 @@ public class CalculatorTest {
 	
 	@Test
 	public void emptyString() {
-	assertEquals(0,cal.StringCalculator(""));
+	try {
+		assertEquals(0,cal.StringCalculator(""));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
+	
 	}
 
 	@Test
 	public void oneNumber() {
 	String s1="2";
 	Integer.parseInt(s1);
-	assertEquals(Integer.parseInt(s1),cal.StringCalculator(s1));
+	try {
+		assertEquals(Integer.parseInt(s1),cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
 	}
 	
 	@Test
 	public void twoNumbers() {
 	String s1="1,2";
-	assertEquals(3,cal.StringCalculator(s1));
+	try{
+		assertEquals(3,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
 	}
 	
 	@Test
 	public void multipleNumbers() {
 	String s1="1,2,3,4,5,6";
-	assertEquals(21,cal.StringCalculator(s1));
+	try{
+		assertEquals(21,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
 	}
 	
 	@Test
 	public void newLineNumber() {
 	String s1="1\n2,3";
-	assertEquals(6,cal.StringCalculator(s1));
+	try{
+		assertEquals(6,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
 	}
 	
 
 	@Test 
 	public void otherDelimiters(){ 
 	String s1="//;\n1;2";
-	assertEquals(3,cal.StringCalculator(s1));
+	try{
+		assertEquals(3,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
+	}
+	
+	@Test 
+	public void negativeNumberException(){ 
+	String s1="//;\n1;-2;-3;-4;-5;-6;1";
+	try{
+		cal.StringCalculator(s1);
+	}
+	catch(Exception e) {
+		System.out.println(e);
+	}
 	}
 	 
 	
