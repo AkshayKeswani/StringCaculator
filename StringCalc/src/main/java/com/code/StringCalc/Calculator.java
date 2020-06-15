@@ -29,7 +29,7 @@ public class Calculator {
 		else {
 			int sum1=0;
 			int count=0;
-			List l1=new ArrayList();
+			List<Integer> l1=new ArrayList<Integer>();
 			for(int i=0;i<element.length;i++) {
 					if(Integer.parseInt(element[i])<0) {
 						l1.add(i);
@@ -47,7 +47,7 @@ public class Calculator {
 				for(Object neg:l1) {
 					negNumbers+=" "+element[(Integer)neg];
 				}
-				throw new NegativeNumber("Number cannot be negative"+negNumbers);
+				throw new NegativeNumber("Number/Numbers cannot be negative"+negNumbers);
 			}
 			return sum1;
 		}

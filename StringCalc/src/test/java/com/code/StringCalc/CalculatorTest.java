@@ -78,12 +78,23 @@ public class CalculatorTest {
 	
 	@Test 
 	public void negativeNumberException(){ 
-	String s1="//;\n1;-2;-3;-4;-5;-6;1";
+	String s1="//;\n1;-2;3";
 	try{
 		cal.StringCalculator(s1);
 	}
 	catch(Exception e) {
 		System.out.println(e);
+	}
+	}
+	
+	@Test 
+	public void greaterThan1000(){ 
+	String s1="//;\n1;2;3;1001";
+	try{
+		assertEquals(6,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
 	}
 	}
 	 
