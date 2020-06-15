@@ -28,7 +28,6 @@ public class Calculator {
 				}
 		}	
 			element=inputOne.substring(i+3).split(del);
-			//      //***\n1***2***3
 		}
 		
 		else {
