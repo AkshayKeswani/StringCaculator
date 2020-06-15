@@ -78,7 +78,7 @@ public class CalculatorTest {
 	
 	@Test 
 	public void negativeNumberException(){ 
-	String s1="//;\n1;-2;3";
+	String s1="//;\n1;-2;3;-4;-5;-6";
 	try{
 		cal.StringCalculator(s1);
 	}
@@ -103,6 +103,17 @@ public class CalculatorTest {
 	String s1="//***\n1***2***3***4";
 	try{
 		assertEquals(10,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
+	}
+	
+	@Test 
+	public void anyLengthMultiDelimiter(){ 
+	String s1="//*****%%%%\n1*****2%%%%3";
+	try{
+		assertEquals(6,cal.StringCalculator(s1));
 	}
 	catch(Exception e) {
 		System.out.println();
