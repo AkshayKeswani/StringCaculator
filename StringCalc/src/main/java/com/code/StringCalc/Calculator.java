@@ -13,8 +13,22 @@ public class Calculator {
 		}
 		
 		if(inputOne.startsWith("//")) {
+			String del="";
+			Integer i=1;
+			boolean flag=true;
 			String s5=Character.toString(inputOne.charAt(2));
-			element=inputOne.substring(4).split(s5);
+			while(flag) {
+				if(Character.toString(inputOne.charAt(2+i))!=Character.toString(inputOne.charAt(2))) {
+					flag=false;
+					del=s5;
+				}
+				else {
+				s5=s5+Character.toString(inputOne.charAt(2+i));
+				i=i+1;
+				}
+		}	
+			element=inputOne.substring(i+3).split(del);
+			//      //***\n1***2***3
 		}
 		
 		else {

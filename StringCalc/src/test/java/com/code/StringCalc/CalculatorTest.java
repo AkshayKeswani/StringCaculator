@@ -97,6 +97,17 @@ public class CalculatorTest {
 		System.out.println();
 	}
 	}
+	
+	@Test 
+	public void anyLengthDelimiter(){ 
+	String s1="//***\n1***2***3***4";
+	try{
+		assertEquals(10,cal.StringCalculator(s1));
+	}
+	catch(Exception e) {
+		System.out.println();
+	}
+	}
 	 
 	
 }
